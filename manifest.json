@@ -1,0 +1,50 @@
+{
+  "name": "RAP",
+  "version": "0.1",
+  "manifest_version": 2,  // 一定要这么写2
+  "description": "RAP Chrome Plugin for Cross-domain",
+  "icons": {
+    "16": "images/icon16.png",
+    "19": "images/icon19.png",
+    "24": "images/icon24.png",
+    "32": "images/icon32.png",
+    "38": "images/icon38.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "19": "images/icon19.png",
+      "24": "images/icon24.png",
+      "32": "images/icon32.png",
+      "38": "images/icon38.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "default_title": "RAP",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "images/Collapsed.gif",
+    "images/Expanded.gif"
+  ],
+  "permissions": [
+    "tabs","*://htcjy.com/*",
+    "*://*/*",
+    "https://api.github.com/*",
+    "storage",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "background": {
+    "scripts": ["jquery-2.0.0.min.js", "background.js"]  // 注册事件页面
+  },
+  "content_scripts":[{
+    "matches":["http://*/*"],
+    "css":["jsonFormater.css"],
+    "js":["jquery-2.0.0.min.js", "content_script.js", "jsonFormater.js"]
+
+  }],
+  "options_page": "option.html"
+}

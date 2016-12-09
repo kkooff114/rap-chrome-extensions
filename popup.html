@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jquery-2.0.0.min.js"></script>
+
+    <script type="text/javascript" src="popup.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 180px;
+            color: #333;
+            overflow: hidden;
+            margin: 0px;
+            padding: 5px;
+            background: white;
+            font-size: 12px;
+        }
+
+        img {
+            margin: 0 4px;
+        }
+
+        #addItemDiv {
+            color: #ccc;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .taskItem {
+            cursor: pointer;
+        }
+
+        input {
+            width: 120px;
+        }
+
+        span {
+            width: 80px;
+        }
+
+        label.on {
+            width: 12px;
+            display: inline-block;
+            height: 12px;
+            background: url(images/icon.png) no-repeat 0px 2px;
+        }
+
+        label.off {
+            width: 12px;
+            display: inline-block;
+            height: 12px;
+            background: url(images/icon.png) no-repeat 0px 2px;
+        }
+    </style>
+</head>
+<body>
+<div id="newItem" class="gray">选项</div>
+<div id="addDiv" class="hide"><input type="text" id="txtTitle"/></div>
+<div id="taskItemList">
+    <div class="taskItem">
+        <span class="taskTitle">是否开启拦截</span>
+        <input id="intercept" type="checkbox" checked>
+    </div>
+    <div class="taskItem">
+        <span>host port</span>
+        <input type="text">
+    </div>
+
+    <div>design by <a href="#">kkooff114</a></div>
+</div>
+</body>
+</html>

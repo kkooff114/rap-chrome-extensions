@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head><title>RAP Options</title></head>
+
+<style>
+
+    .labels{
+        text-align: end;
+        margin-top: 5px;
+    }
+
+    .inputs{
+        text-align: start;
+    }
+
+    #status{
+        margin-top: 10px;
+    }
+</style>
+<body>
+<div class="container">
+
+    <div class="center-block" style="text-align: center; margin-top: 100px;">
+
+        <div class="form-group row">
+            <label class="col-sm-6 control-label labels">是否开启拦截</label>
+            <div class="col-sm-6 inputs">
+                <input type="checkbox" id="intercept">
+            </div>
+        </div>
+
+        <div class="form-group row">
+
+            <label class="col-sm-6 control-label labels" for="host">跳转host port</label>
+            <div class="col-sm-6 inputs">
+                <input type="text" class="form-control" id="host" placeholder="host port">
+            </div>
+        </div>
+
+        <div class="form-group row">
+
+            <label class="col-sm-6 control-label labels" for="split-string">分隔url(获取该url后面的地址和上面的host进行拼接)</label>
+            <div class="col-sm-6 inputs">
+                <input type="text" class="form-control" id="split-string" placeholder="获取该url后面的地址和上面的host进行拼接">
+            </div>
+        </div>
+
+        <div>当前状态</div>
+
+        <div>是否开启: <span id="curr-intercept"></span></div>
+        <div>host: <span id="curr-host"></span></div>
+
+        <button type="submit" id="save" class="btn btn-default">保存</button>
+
+        <div id="status"></div>
+
+    </div>
+</div>
+<script src="option.js"></script>
+<link href="bootstrap.min.css" rel="stylesheet">
+</body>
+</html>
