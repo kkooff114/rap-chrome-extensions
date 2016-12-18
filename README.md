@@ -13,4 +13,4 @@ RAP Chrome Plugin for Cross-domain
 
 #TODO
 
--[]直接获取分割url, 这样可取消2和3的配置
+- [ ] 直接获取分割url, 这样可取消2和3的配置
